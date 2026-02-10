@@ -37,13 +37,20 @@ You will also customize each lab slightly to make the behavior your own and demo
 
 By completing this project, you will be able to:
 
-1. Explain what a PLC is and how it differs from a microcontroller
-2. Identify digital inputs, outputs, and commons on a PLC
-3. Write ladder logic to control physical outputs
-4. Implement memory using internal control relays
-5. Use timers to create time-based behavior
-6. Debug PLC programs using live I/O monitoring
-7. Explain system behavior in terms of inputs, logic, and outputs
+1. **Identify** components of a PLC system and associate each with its control function  
+   *Fulfills Course Learning Outcome 1*
+2. **Implement** basic logic operations (AND, OR, XOR) using ladder logic contacts  
+   *Fulfills Course Learning Outcome 2*
+3. **Design and test** control programs for direct I/O, memory-based, and timer-based behaviors  
+   *Fulfills Course Learning Outcome 2*
+4. **Apply** principles of deterministic control and safety interlocks to physical systems  
+   *Fulfills Course Learning Outcome 4*
+5. **Debug** PLC programs using live I/O monitoring and systematic testing  
+   *Fulfills Course Learning Outcome 2*
+6. **Explain** the role of PLCs in industrial automation and safety-critical systems  
+   *Fulfills Course Learning Outcome 5*
+7. **Document** control logic decisions, testing procedures, and system behavior  
+   *Fulfills Course Learning Outcome 2*
 
 ---
 
@@ -98,32 +105,6 @@ This is essential for understanding how PLCs process multiple conditions.
 
 ---
 
-### Required Behavior
-
-You must implement and demonstrate **all three** of the following logic operations:
-
-#### AND Logic
-- **Both** green button (I-00) **AND** red button (I-01) must be pressed  
-  → **green light (O-00)** turns ON  
-- If either button is released  
-  → green light turns OFF
-
-#### OR Logic
-- **Either** green button (I-00) **OR** red button (I-01) is pressed  
-  → **red light (O-01)** turns ON  
-- If both buttons are released  
-  → red light turns OFF
-
-#### XOR (Exclusive OR) Logic
-- **Exactly one** button is pressed (green **XOR** red)  
-  → **buzzer (O-02)** turns ON  
-- If both buttons are pressed or both are released  
-  → buzzer turns OFF
-
-All three behaviors must work correctly and simultaneously.
-
----
-
 ### Implementation Notes
 
 - Use series contacts for AND logic
@@ -151,26 +132,6 @@ Lab 2 demonstrates **direct cause-and-effect** between inputs and outputs. There
 
 ---
 
-### Required Behavior
-
-You should implement and test **both** of the following:
-
-#### Behavior A
-- Press and hold **green button (I-00)**  
-  → **green light (O-00)** turns ON  
-- Release the button  
-  → green light turns OFF immediately
-
-#### Behavior B
-- Press and hold **red button (I-01)**  
-  → **red light (O-01)** turns ON  
-- Release the button  
-  → red light turns OFF immediately
-
-Outputs must only be ON while the button is physically pressed.
-
----
-
 ### Customization (Required)
 
 Choose **one**:
@@ -187,28 +148,6 @@ The behavior must remain **direct** (no latching).
 ### Purpose
 
 Lab 3 introduces **memory** using an internal control relay. The PLC now remembers whether the system is ON or OFF.
-
----
-
-### Required Behavior
-
-- **Green button (I-00)** acts as **Start**
-- **Red button (I-01)** acts as **Stop**
-
-Expected behavior:
-
-1. Initially, all outputs are OFF
-2. Press and release **Start**
-   - System turns ON
-3. Outputs remain ON after Start is released
-4. Press **Stop**
-   - System turns OFF
-5. Outputs remain OFF after Stop is released
-
-This requires:
-- An internal control relay
-- A latching (sealing) contact
-- Stop overriding Start
 
 ---
 
@@ -237,20 +176,6 @@ The Start/Stop logic must remain correct.
 Lab 4 introduces **timers**, allowing the PLC to make decisions based on **elapsed time**, not just button presses.
 
 This is essential for real systems (delays, warnings, sequencing).
-
----
-
-### Required Behavior (Base)
-
-Use a timer so that **something does not happen immediately**.
-
-Example base behaviors (choose one as your starting point):
-
-- After pressing **Start**, wait a few seconds before turning on an output
-- When the system turns ON, activate the buzzer for a short duration
-- Delay the red or green light turning ON or OFF
-
-At least **one timer** must be used meaningfully.
 
 ---
 
