@@ -33,6 +33,16 @@ You will complete **four labs** that build progressively:
 
 You will also customize each lab slightly to make the behavior your own and demonstrate understanding.
 
+**Critical Attendance Requirement:**
+
+⚠️ **All team members must attend ALL PLC sessions at Bessemer.** If any team member misses even a single PLC session, that student must complete the entire project individually, even if they participated in other sessions.
+
+PLC sessions include:
+- February 10 (2:30-4pm)
+- February 17 (2:30-4pm)
+- February 23 (11-11:50am)
+- February 24 (2:30-4pm)
+
 ## Learning Outcomes
 
 By completing this project, you will be able to:
@@ -52,8 +62,6 @@ By completing this project, you will be able to:
 7. **Document** control logic decisions, testing procedures, and system behavior  
    *Fulfills Course Learning Outcome 2*
 
----
-
 ## Hardware and Software
 
 ### Hardware
@@ -68,8 +76,6 @@ By completing this project, you will be able to:
 - Connected Components Workbench (CCW)
 - Ladder Logic programming environment
 
----
-
 ## I/O Mapping for Our Setup
 
 Use **this mapping**, even if it differs from the guidebook.
@@ -83,8 +89,6 @@ Use **this mapping**, even if it differs from the guidebook.
 - **O-01** → Red light  
 - **O-02** → Buzzer  
 
----
-
 ## Project Structure
 
 You will complete **four labs**. Each lab has:
@@ -92,8 +96,6 @@ You will complete **four labs**. Each lab has:
 - A small customization requirement
 
 You should verify physical behavior at each step before moving on.
-
----
 
 ## Lab 0: Logic Fundamentals (AND, OR, XOR)
 
@@ -103,16 +105,12 @@ Lab 0 introduces **basic logic operations** using ladder logic. You will learn h
 
 This is essential for understanding how PLCs process multiple conditions.
 
----
-
 ### Implementation Notes
 
 - Use series contacts for AND logic
 - Use parallel contacts for OR logic
 - XOR requires a combination: (A AND NOT B) OR (NOT A AND B)
 - Test each behavior individually, then verify all three work together
-
----
 
 ### Demonstration Requirements
 
@@ -122,15 +120,11 @@ You must show:
 3. XOR behavior working (exactly one button → buzzer)
 4. Explain your ladder logic to the instructor
 
----
-
 ## Lab 2: Direct Control (No Memory)
 
 ### Purpose
 
 Lab 2 demonstrates **direct cause-and-effect** between inputs and outputs. There is no memory in the system.
-
----
 
 ### Customization (Required)
 
@@ -141,22 +135,16 @@ Choose **one**:
 
 The behavior must remain **direct** (no latching).
 
----
-
 ## Lab 3: Start/Stop Control with Memory
 
 ### Purpose
 
 Lab 3 introduces **memory** using an internal control relay. The PLC now remembers whether the system is ON or OFF.
 
----
-
 ### Minimum Output Requirement
 
 When the system is ON, at least **one output** must be active:
 - Green light, red light, or buzzer
-
----
 
 ### Customization (Required)
 
@@ -167,8 +155,6 @@ Choose at least **one**:
 
 The Start/Stop logic must remain correct.
 
----
-
 ## Lab 4: Timers and Time-Based Behavior
 
 ### Purpose
@@ -176,8 +162,6 @@ The Start/Stop logic must remain correct.
 Lab 4 introduces **timers**, allowing the PLC to make decisions based on **elapsed time**, not just button presses.
 
 This is essential for real systems (delays, warnings, sequencing).
-
----
 
 ### Customization (Required)
 
@@ -199,6 +183,7 @@ You do **not** need multiple timers unless you want to explore further.
 - Timer behavior is visible in CCW while the program runs
 
 ---
+
 ## Deliverables
 
 Each team must submit:
