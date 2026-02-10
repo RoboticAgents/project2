@@ -1,0 +1,85 @@
+- build/build-log.md:
+    - description: Ensure build log exists
+      check: ConfirmFileExists
+    - description: Build log has at least 300 words
+      check: CountFileWords
+      options:
+        count: 300
+        exact: false
+    - description: Build log includes Lab 0 section
+      check: MatchFileFragment
+      options:
+        fragment: "Lab 0"
+        count: 1
+        exact: false
+    - description: Build log includes Lab 2 section
+      check: MatchFileFragment
+      options:
+        fragment: "Lab 2"
+        count: 1
+        exact: false
+    - description: Build log includes Lab 3 section
+      check: MatchFileFragment
+      options:
+        fragment: "Lab 3"
+        count: 1
+        exact: false
+    - description: Build log includes Lab 4 section
+      check: MatchFileFragment
+      options:
+        fragment: "Lab 4"
+        count: 1
+        exact: false
+
+- build/photos/:
+    - description: At least 3 screenshots in photos folder
+      check: CountDirectoryEntries
+      options:
+        count: 3
+        exact: false
+
+- writing/reflection.md:
+    - description: Ensure reflection document exists
+      check: ConfirmFileExists
+    - description: Reflection has at least 800 words
+      check: CountFileWords
+      options:
+        count: 800
+        exact: false
+    - description: Reflection includes Lab 0 section
+      check: MatchFileFragment
+      options:
+        fragment: "Lab 0"
+        count: 1
+        exact: false
+    - description: Reflection includes Lab 2 section
+      check: MatchFileFragment
+      options:
+        fragment: "Lab 2"
+        count: 1
+        exact: false
+    - description: Reflection includes Lab 3 section
+      check: MatchFileFragment
+      options:
+        fragment: "Lab 3"
+        count: 1
+        exact: false
+    - description: Reflection includes Lab 4 section
+      check: MatchFileFragment
+      options:
+        fragment: "Lab 4"
+        count: 1
+        exact: false
+    - description: Reflection includes PLC Programming Concepts section
+      check: MatchFileFragment
+      options:
+        fragment: "PLC Programming Concepts"
+        count: 1
+        exact: false
+
+# Repository quality checks
+- description: Repository has at least 5 commits
+  check: CountCommits
+  options:
+    count: 5
+

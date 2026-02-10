@@ -1,0 +1,28 @@
+# Arduino
+*.hex
+*.elf
+*.map
+*.lst
+
+# Build files
+build/
+.build/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Test files
+__pycache__/
+*.pyc
+
+# Documentation temporary files
+*.tmp
+*.bak
