@@ -7,13 +7,13 @@
 
 ## Timeline
 
-- **Assigned:** February 10, 2026
-- **Lab Sessions:** 
-  - February 10 (2:30-4pm): Lab 0 - Logic operations (AND, OR, XOR)
+- **Assigned:** February 16, 2026
+- **Sessions:** 
+  - February 10 (2:30-4pm): Introduction - Logic operations (AND, OR, XOR)
   - February 17 (2:30-4pm): Parts 1-5 work session
+  - February 18 (11am-11:50am): Parts 1-5 work session
   - February 23 (11-11:50am): Final demonstrations and technical interviews
 - **Final Product Due:** February 23 at 11:50 AM
-- **Duration:** 2 weeks
 
 ---
 
@@ -64,7 +64,8 @@ You will now complete **five parts** that build progressively:
 PLC sessions include:
 - February 10 (2:30-4pm): initial exercise
 - February 17 (2:30-4pm)
-- February 23 (11-11:50am) 
+- February 18 (11am-11:50am)
+- February 23 (11am-11:50am) 
 
 ## Learning Outcomes
 
@@ -90,7 +91,7 @@ By completing this project, you will be able to:
 - **Team Size:** 2–3 students per PLC station
 - **Team Formation:** Teams are assigned by the instructor (posted on Discord)
 - **Individual Accountability:** Each team member must demonstrate hands-on operation of the PLC at least once and understanding of all parts
-- **Rotation Requirement:** During lab sessions, team members should rotate who is actively programming/testing
+- **Rotation Requirement:** During PLC sessions, team members should rotate who is actively programming/testing
 - **Collaboration:** All team members must contribute to design, programming, testing, and documentation
 - **Evaluation:** Individual technical interviews and peer evaluations ensure everyone understands the system
 
@@ -129,6 +130,23 @@ You will complete **five parts**. Each part builds on previous concepts and intr
 
 Follow the slide presentation for step-by-step guidance, and verify physical behavior at each step before moving on.
 
+### Condition Table Format
+
+For each part, you will create a **condition table** in your reflection that describes when outputs turn ON based on input conditions. Use this format:
+
+```
+Rung | Purpose              | Conditions for Output = TRUE
+-----|----------------------|--------------------------------
+1    | Example output       | Input A is pressed AND Input B is NOT pressed
+2    | Another output       | Timer has finished OR Input C is TRUE
+```
+
+**Tips for condition tables:**
+- List each rung separately
+- Describe the purpose of the rung (what it controls)
+- Use clear logic statements (AND, OR, NOT) to describe when the output activates
+- For timer-based logic, specify timer state conditions (e.g., "Timer TON_1 is active" or "Timer TON_1.DN = TRUE")
+
 ## Part 1: Direct Control (Green Button Controls Green Light)
 
 ### Purpose
@@ -155,15 +173,7 @@ You must show:
 1. Green button turning the green light ON and keeping it ON (even after release)
 2. Red button turning the green light OFF
 3. Explain how the latching circuit maintains state
-4. **Create a condition table in your reflection** for each rung showing when the output is TRUE
-
-**Example condition table format:**
-```
-Rung | Purpose              | Conditions for Output = TRUE
------|----------------------|--------------------------------
-1    | Example output       | Input A is pressed AND Input B is NOT pressed
-2    | Another output       | Timer has finished OR Input C is TRUE
-```
+4. **Create a condition table in your reflection** for each rung showing when the output is TRUE (see Condition Table Format section above)
 
 ## Part 2: Inverse Logic (Red Light ON When Green Not Pressed)
 
@@ -191,7 +201,7 @@ You must show:
 2. Red light OFF when green button is held down
 3. Red light returns to ON when green button is released
 4. Explain the difference between normally open (NO) and normally closed (NC) contacts
-5. **Create a condition table in your reflection** for each rung showing when the output is TRUE
+5. **Create a condition table in your reflection** for each rung showing when the output is TRUE (see Condition Table Format section above)
 
 ## Part 3: Timer & Buzzer (Manufacturing Warning System)
 
@@ -242,7 +252,7 @@ You must show:
 4. Green light coming ON after timer finishes
 5. Red button resetting the system
 6. Explain your modification and why you implemented it that way
-7. **Create a condition table in your reflection** for each rung showing when outputs turn ON based on timer state and input conditions
+7. **Create a condition table in your reflection** for each rung showing when outputs turn ON based on timer state and input conditions (see Condition Table Format section above)
 
 ## Part 4: Alternating Lights
 
@@ -281,7 +291,7 @@ You must show:
 2. Consistent timing
 3. Your modification working correctly
 4. Explain how the timers interact with each other
-5. **Create a condition table in your reflection** for each rung describing what enables each timer and what each timer controls
+5. **Create a condition table in your reflection** for each rung describing what enables each timer and what each timer controls (see Condition Table Format section above)
 
 ## Part 5: Conveyor System (Limit Switches)
 
@@ -331,7 +341,7 @@ You must show:
 5. Red button resetting the system
 6. Your modification working correctly
 7. Explain how sequential logic differs from parallel logic
-8. **Create a condition table in your reflection** for each step showing what conditions must be TRUE for that step to activate
+8. **Create a condition table in your reflection** for each step showing what conditions must be TRUE for that step to activate (see Condition Table Format section above)
 
 ---
 
