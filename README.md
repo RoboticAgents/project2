@@ -27,7 +27,7 @@
 
 In this project, you will work hands-on with an industrial Programmable Logic Controller (PLC) using the Allen-Bradley Micro820. PLCs are used to control real-world systems such as manufacturing equipment, traffic systems, and safety-critical machinery.
 
-**Note:** We have already completed Lab 0 (basic logic operations: AND, OR, XOR) and Lab 1 in class as exercises.
+**Note:** We have already completed basic logic operations: AND, OR, XOR during our previous lab session.
 
 You will now complete **five parts** that build progressively:
 - Part 1: Direct input/output control (Green button controls green light)
