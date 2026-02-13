@@ -185,7 +185,7 @@ In a manufacturing plant, it is common to give an audible warning when a piece o
 ### Required Modification
 
 You must modify this basic implementation in at least one way. Choose one or more:
-- Change the timer duration (e.g., 3 seconds or 10 seconds)
+- Change the timer duration 
 - Add logic so both red and green lights are OFF during the siren phase
 - Add a second timer for a multi-stage warning system- Make the siren pulse (on/off) during the warning period instead of continuous
 
@@ -222,7 +222,7 @@ Make the red and green lights alternate ON and OFF:
 ### Required Modification
 
 You must modify the basic alternating pattern in at least one way. Choose one or more:
-- Make the lights have different ON durations (e.g., green 3 sec, red 5 sec)
+- Make the lights have different ON durations
 - Add the buzzer to sound only during transitions
 - Create a three-phase pattern (green, red, both OFF, repeat)
 - Add start/stop control using the green and red buttons
