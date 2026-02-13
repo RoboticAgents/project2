@@ -20,6 +20,14 @@
 **Describe the behavior you implemented:**
 
 
+**Condition table for each rung:**
+```
+Rung | Purpose              | Conditions for Output = TRUE
+-----|----------------------|--------------------------------
+1    |                      |
+2    |                      |
+```
+
 **What customization did you implement?**
 
 
@@ -31,6 +39,16 @@
 **Describe the behavior you implemented:**
 
 
+**Condition table for each rung:**
+```
+Rung | Purpose              | Conditions for Output = TRUE
+-----|----------------------|--------------------------------
+1    |                      |
+```
+
+**Explain the difference between NO and NC contacts in your implementation:**
+
+
 **What customization did you implement?**
 
 
@@ -40,6 +58,21 @@
 ### Lab 4: Timers and Time-Based Behavior
 
 **Describe the behavior you implemented:**
+
+**Condition table for each rung:**
+```
+Rung | Purpose              | Conditions for Output = TRUE
+-----|----------------------|--------------------------------
+1    |                      |
+2    |                      |
+3    |                      |
+4    |                      |
+5    |                      |
+```
+
+**Explain the timer logic flow:**
+- When does each timer start? When does it stop?
+- How does the timer state (running vs done) control other outputs?
 
 **What customization did you implement?**
 

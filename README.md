@@ -5,10 +5,24 @@
 
 ---
 
+## Timeline
+
+- **Assigned:** February 10, 2026
+- **Lab Sessions:** 
+  - February 10 (2:30-4pm): Lab 0 - Logic operations (AND, OR, XOR)
+  - February 17 (2:30-4pm): Parts 1-5 work session
+  - February 23 (11-11:50am): Final demonstrations and technical interviews
+- **Final Product Due:** February 23 at 11:50 AM
+- **Duration:** 2 weeks
+
+---
+
 ## Table of Contents
 
+- [Timeline](#timeline)
 - [Overview](#overview)
 - [Learning Outcomes](#learning-outcomes)
+- [Team Structure](#team-structure)
 - [Hardware and Software](#hardware-and-software)
 - [I/O Mapping for Our Setup](#io-mapping-for-our-setup)
 - [Project Structure](#project-structure)
@@ -19,6 +33,11 @@
 - [Part 5: Conveyor System (Limit Switches)](#part-5-conveyor-system-limit-switches)
 - [Deliverables](#deliverables)
 - [Assessment](#assessment)
+- [Team Evaluation Process](#team-evaluation-process)
+- [Resources](#resources)
+- [Submission Instructions](#submission-instructions)
+- [Academic Integrity](#academic-integrity)
+- [Getting Help](#getting-help)
 - [Safety Notes](#safety-notes)
 
 ---
@@ -65,6 +84,15 @@ By completing this project, you will be able to:
    *Fulfills Course Learning Outcome 5*
 7. **Document** control logic decisions, testing procedures, and system behavior  
    *Fulfills Course Learning Outcome 2*
+
+## Team Structure
+
+- **Team Size:** 2–3 students per PLC station
+- **Team Formation:** Teams are assigned by the instructor (posted on Discord)
+- **Individual Accountability:** Each team member must demonstrate hands-on operation of the PLC at least once and understanding of all parts
+- **Rotation Requirement:** During lab sessions, team members should rotate who is actively programming/testing
+- **Collaboration:** All team members must contribute to design, programming, testing, and documentation
+- **Evaluation:** Individual technical interviews and peer evaluations ensure everyone understands the system
 
 ## Hardware and Software
 
@@ -119,6 +147,7 @@ This part demonstrates **direct cause-and-effect** between inputs and outputs us
 - Follow the slide presentation for step-by-step instructions
 - Use latching logic (output coil drives itself through normally open contact)
 - Red button acts as a reset
+- **Add a comment above each rung** explaining what the rung does
 
 ### Demonstration Requirements
 
@@ -126,6 +155,15 @@ You must show:
 1. Green button turning the green light ON and keeping it ON (even after release)
 2. Red button turning the green light OFF
 3. Explain how the latching circuit maintains state
+4. **Create a condition table in your reflection** for each rung showing when the output is TRUE
+
+**Example condition table format:**
+```
+Rung | Purpose              | Conditions for Output = TRUE
+-----|----------------------|--------------------------------
+1    | Example output       | Input A is pressed AND Input B is NOT pressed
+2    | Another output       | Timer has finished OR Input C is TRUE
+```
 
 ## Part 2: Inverse Logic (Red Light ON When Green Not Pressed)
 
@@ -144,13 +182,16 @@ This part introduces **inverse logic** using normally closed contacts.
 - Follow the slide presentation for step-by-step instructions
 - Use a normally closed (NC) contact for the green button
 - This demonstrates continuous monitoring of input state
+- **Add a comment above each rung** explaining what the rung does
 
 ### Demonstration Requirements
 
 You must show:
 1. Red light ON in default state (no button pressed)
 2. Red light OFF when green button is held down
-3. Red light returns to ON when green button is released4. Explain the difference between normally open (NO) and normally closed (NC) contacts
+3. Red light returns to ON when green button is released
+4. Explain the difference between normally open (NO) and normally closed (NC) contacts
+5. **Create a condition table in your reflection** for each rung showing when the output is TRUE
 
 ## Part 3: Timer & Buzzer (Manufacturing Warning System)
 
@@ -187,7 +228,10 @@ In a manufacturing plant, it is common to give an audible warning when a piece o
 You must modify this basic implementation in at least one way. Choose one or more:
 - Change the timer duration 
 - Add logic so both red and green lights are OFF during the siren phase
-- Add a second timer for a multi-stage warning system- Make the siren pulse (on/off) during the warning period instead of continuous
+- Add a second timer for a multi-stage warning system
+- Make the siren pulse (on/off) during the warning period instead of continuous
+
+**Important:** Add a comment above each rung explaining what the rung does and how it contributes to the sequence.
 
 ### Demonstration Requirements
 
@@ -198,6 +242,7 @@ You must show:
 4. Green light coming ON after timer finishes
 5. Red button resetting the system
 6. Explain your modification and why you implemented it that way
+7. **Create a condition table in your reflection** for each rung showing when outputs turn ON based on timer state and input conditions
 
 ## Part 4: Alternating Lights
 
@@ -227,6 +272,8 @@ You must modify the basic alternating pattern in at least one way. Choose one or
 - Create a three-phase pattern (green, red, both OFF, repeat)
 - Add start/stop control using the green and red buttons
 
+**Important:** Add a comment above each rung explaining what the rung does and how the timers interact.
+
 ### Demonstration Requirements
 
 You must show:
@@ -234,6 +281,7 @@ You must show:
 2. Consistent timing
 3. Your modification working correctly
 4. Explain how the timers interact with each other
+5. **Create a condition table in your reflection** for each rung describing what enables each timer and what each timer controls
 
 ## Part 5: Conveyor System (Limit Switches)
 
@@ -271,6 +319,8 @@ You must modify this basic implementation in at least one way. Choose one or mor
 - Add a timer between steps to simulate processing time
 - Create a counter that tracks how many boxes have passed through
 
+**Important:** Add a comment above each rung explaining what the rung does and which step it controls.
+
 ### Demonstration Requirements
 
 You must show:
@@ -281,6 +331,7 @@ You must show:
 5. Red button resetting the system
 6. Your modification working correctly
 7. Explain how sequential logic differs from parallel logic
+8. **Create a condition table in your reflection** for each step showing what conditions must be TRUE for that step to activate
 
 ---
 
@@ -299,30 +350,199 @@ Each team must submit:
    - One challenge you encountered and how you resolved it
    - One real-world application where you might use sequential logic like Part 5
 
-2. **Screenshots** (include in your submission):
-   - Part 1 ladder logic
-   - Part 2 ladder logic
-   - Part 3 ladder logic (showing timer and master bit)
-   - Part 4 ladder logic (showing multiple timers)
-   - Part 5 ladder logic (showing limit switches and step bits)
-   - At least two screenshots of live I/O or timer status during operation
+2. **PLC Programs** (choose one option):
+   - **Option A:** Export and upload your CCW program file (.ACD file) for each part (Part1.ACD, Part2.ACD, etc.)
+   - **Option B:** Submit screenshots of ladder logic for each part:
+     - Part 1 ladder logic
+     - Part 2 ladder logic
+     - Part 3 ladder logic (showing timer and master bit)
+     - Part 4 ladder logic (showing multiple timers)
+     - Part 5 ladder logic (showing limit switches and step bits)
+   - Additionally, include at least two screenshots of live I/O or timer status during operation
 
 3. **In-lab demonstration**:
-   - Show working behavior for all five parts to the instructor
+   - **Team demonstration:** Show working behavior for all five parts to the instructor
+   - **Individual operation requirement:** Each team member must personally operate the PLC to demonstrate at least one part during the team demo
    - Be prepared to explain your modifications and logic choices
+
+4. **Peer and self-evaluation form** (due with final submission):
+   - Complete [peer and self-evaluation form](https://forms.gle/PLACEHOLDER) for each teammate
+   - Rate contributions, collaboration, and reliability
 
 ## Assessment
 
-**Total: 10 points**
+**Total: 10 points** (part of 40 points for all projects)
 
-- Part 1 functionality (latching control): 1.0 point
-- Part 2 functionality (inverse logic): 1.0 point
-- Part 3 functionality (timer & warning system) + modification: 2.5 points
-- Part 4 functionality (alternating lights) + modification: 2.5 points
-- Part 5 functionality (conveyor/limit switches) + modification: 2.0 points
-- Documentation and explanation: 1.0 point
+**Your grade = (Team Product Score + Technical Interview Score) − Contribution Penalty**
 
-Understanding and explanation matter as much as correct behavior.
+### Team Product Evaluation (7.5 points)
+
+All team members start with the same team product score.
+
+#### Functionality (6.0 points)
+- [ ] Part 1: Latching control with memory (1.0 pt)
+- [ ] Part 2: Inverse logic with NC contacts (1.0 pt)
+- [ ] Part 3: Timer-based sequential control + modification (2.0 pts)
+- [ ] Part 4: Multiple timers and alternating behavior + modification (2.0 pts)
+- [ ] Part 5: Sequential logic with limit switches + modification (1.5 pts)
+
+#### Documentation (1.5 points)
+- [ ] Condition tables completed for all parts (0.6 pts)
+- [ ] Reflection quality and insights (0.6 pts)
+- [ ] Program files or screenshots with comments (0.3 pts)
+
+### Individual Technical Interview (2.5 points)
+
+Each student will have a ~5 minute individual meeting with the instructor (during February 23 session or immediately after) where you will:
+- **Demonstrate operation:** Run one assigned part on the PLC (chosen by instructor)
+- **Explain ladder logic:** Walk through your condition table and explain when outputs turn ON/OFF
+- **Describe modifications:** Explain the modifications your team made to Parts 3-5
+- **Answer conceptual questions:** 
+  - What is the difference between NO and NC contacts?
+  - How does a timer work in ladder logic?
+  - When would you use a PLC vs a microcontroller?
+  - How does memory/latching differ from direct control?
+
+**Scoring:**
+- **2.25–2.5 pts:** Can operate PLC confidently, explain all logic clearly, deep understanding
+- **1.9–2.2 pts:** Can operate PLC, explain most concepts, solid understanding
+- **1.5–1.8 pts:** Basic operation ability, some gaps in explanation
+- **1.0–1.4 pts:** Struggles with operation or cannot explain logic adequately
+- **0–0.9 pts:** Cannot operate PLC or demonstrate minimal understanding
+
+### Peer Evaluation & Contribution Penalty (0 to −10 points)
+
+After calculating your base score (Team Product + Technical Interview = up to 10 points), a penalty is applied based on peer evaluations and contribution evidence.
+
+**Penalty determined by:**
+- Peer evaluation feedback (communication, collaboration, hands-on participation, contribution quality)
+- Observation during lab sessions (did you actively program/test or just watch?)
+- Self-reflection quality and alignment with peer feedback
+
+**Penalty levels:**
+- **No penalty (0 pts deducted):** Excellent peer reviews (4.5–5.0 avg), strong evidence of hands-on participation
+- **Minor penalty (−0.5 to −1 pts):** Good peer reviews (3.5–4.4 avg), minor contribution concerns
+- **Moderate penalty (−1.5 to −3 pts):** Adequate peer reviews (2.5–3.4 avg), limited hands-on participation
+- **Major penalty (−4 to −7 pts):** Poor peer reviews (1.5–2.4 avg), minimal hands-on work
+- **Severe penalty (−8 to −10 pts):** Very poor peer reviews (<1.5 avg), non-participation
+
+### Extra Credit (up to 0.5 points)
+- Advanced modifications beyond requirements (e.g., counters, complex multi-timer sequences, advanced interlocks) (0.3 pts)
+- Exceptional documentation, innovation, or demonstrating deep PLC understanding (0.2 pts)
+
+---
+
+## Team Evaluation Process
+
+### Peer and Self-Evaluation Form (Due February 23)
+
+Each team member will complete a **peer and self-evaluation form** (Google Form) that includes:
+
+**Part 1: Peer Evaluation**
+
+For each teammate (including yourself), rate on a scale of 1-5:
+
+1. **Communication:** Did they communicate actively and keep the team updated?
+2. **Hands-on Participation:** Did they actively program/test the PLC or just observe?
+3. **Work Quality:** Did they put in genuine effort to understand and document the logic?
+4. **Collaboration:** Were they open to discussion and willing to help debug?
+5. **Contribution:** Did they contribute an equal/fair share to programming and testing?
+6. **Reliability:** Did they attend all sessions and follow through on commitments?
+
+**Open-ended questions:**
+- Describe specific tasks this teammate completed
+- Would you want to work with this teammate again? Why or why not?
+
+**Part 2: Self-Reflection**
+
+**Your Contributions:**
+- List which parts you personally programmed/tested
+- Estimate hours spent on the project
+- Were there any circumstances that affected your ability to contribute?
+
+**Honest Assessment:**
+- Rate your own communication, hands-on participation, work quality, collaboration, contribution, and reliability (1-5)
+
+---
+
+## Resources
+
+### PLC Documentation
+- [Allen-Bradley Micro800 Programming Guide](https://literature.rockwellautomation.com/idc/groups/literature/documents/um/2080-um002_-en-e.pdf)
+- [Connected Components Workbench User Manual](https://literature.rockwellautomation.com/idc/groups/literature/documents/um/ccw-um001_-en-p.pdf)
+- [PLC Guidebook Parts II and III](https://drive.google.com/file/d/1gDMwGD6chMFH_-qLaJD7Ft-CEAc2gAlF/view?usp=sharing)
+
+### Ladder Logic Tutorials
+- [Introduction to Ladder Logic](https://www.plcacademy.com/ladder-logic-tutorial/)
+- [Understanding PLC Timers](https://instrumentationtools.com/plc-timer-instructions/)
+- [Ladder Logic Basics - Video Series](https://www.youtube.com/playlist?list=PLd7Qhmq_dP0NzSJ6mXj2N5p9HFq9YvKBR)
+
+### Reference Materials
+- Class lecture slides and notes
+- [Step-by-step slide presentation](https://docs.google.com/presentation/d/17-4WhA_WngpMENG631DXtnen3qnBNmOJ/edit?usp=sharing&ouid=115017904697304329138&rtpof=true&sd=true)
+
+### Industrial Control Concepts
+- *Introduction to Autonomous Robots* (Correll et al.) - Chapter on Control Systems
+- [PLCs in Industry - Applications](https://www.automationdirect.com/plc-applications)
+
+---
+
+## Submission Instructions
+
+### Deadlines
+Submit via your team's GitHub repository:
+- **February 23, by 11:50 AM:** Push all deliverables:
+  - Reflection document to `writing/reflection.md`
+  - PLC program files (.ACD) OR screenshots to `programs/` or `photos/` folder
+  - Any additional documentation
+
+**Additionally, by February 23 at 11:50 AM each team member must complete:**
+- [Peer and self-evaluation form](https://forms.gle/PLACEHOLDER)
+
+### What to Submit
+
+1. **GitHub Repository Contents:**
+   - `writing/reflection.md` - completed with all sections and condition tables
+   - `programs/` folder - CCW program files for each part (Part1.ACD, Part2.ACD, etc.) **OR**
+   - `photos/` folder - screenshots of ladder logic for each part
+   - `photos/` folder - at least 2 screenshots of live I/O or timer status during operation
+
+2. **Google Form:**
+   - Complete peer and self-evaluation form (link provided above)
+
+### Lab Demonstration (February 23)
+- Arrive at Bessemer by 11:00 AM
+- Be prepared to demonstrate all five parts
+- Each team member must personally operate the PLC for at least one part
+- Technical interviews will occur during or immediately after demonstrations
+
+---
+
+## Academic Integrity
+
+- **Collaboration:** You may discuss concepts with other teams, but your ladder logic programs must be your own team's work
+- **Resources:** Cite any external tutorials, websites, or documentation you reference in your reflection
+- **LLM Usage:** If you use ChatGPT, Copilot, or other AI tools:
+  - Document what you asked and how you used the responses in your reflection
+  - You must understand and be able to explain any code/logic generated
+  - You are responsible for correctness and functionality
+- **Guidebook:** You may use the PLC Guidebook as a reference, but adapt examples to our I/O mapping
+- **Plagiarism:** Copying ladder logic or documentation from other teams is prohibited
+
+---
+
+## Getting Help
+
+- **Lab Sessions:** Use the February 17 lab session to work with your team and get real-time help from the instructor
+- **Office Hours:** See course syllabus for office hours schedule
+- **Debugging Tips:** 
+  - Use CCW's live monitoring to watch inputs and outputs in real-time
+  - Test each rung individually before combining logic
+  - Document your issue before asking for help (what you expected vs. what happened)
+- **Hardware Issues:** If buttons, lights, or the PLC are not responding correctly, notify the instructor immediately
+- **Discord:** Post general questions (not solutions) in the project channel
+
+---
 
 ## Safety Notes
 
