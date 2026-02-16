@@ -90,7 +90,7 @@ By completing this project, you will be able to:
 
 - **Team Size:** 2–3 students per PLC station
 - **Team Formation:** Teams are assigned by the instructor (posted on Discord)
-- **Individual Accountability:** Each team member must demonstrate hands-on operation of the PLC at least once and understanding of all parts
+- **Individual Accountability:** Each team member must demonstrate hands-on operation of the PLC and understanding of all parts at least once
 - **Rotation Requirement:** During PLC sessions, team members should rotate who is actively programming/testing
 - **Collaboration:** All team members must contribute to design, programming, testing, and documentation
 - **Evaluation:** Individual technical interviews and peer evaluations ensure everyone understands the system
@@ -368,7 +368,6 @@ Each team must submit:
      - Part 3 ladder logic (showing timer and master bit)
      - Part 4 ladder logic (showing multiple timers)
      - Part 5 ladder logic (showing limit switches and step bits)
-   - Additionally, include at least two screenshots of live I/O or timer status during operation
 
 3. **In-lab demonstration**:
    - **Team demonstration:** Show working behavior for all five parts to the instructor
@@ -376,7 +375,7 @@ Each team must submit:
    - Be prepared to explain your modifications and logic choices
 
 4. **Peer and self-evaluation form** (due with final submission):
-   - Complete [peer and self-evaluation form](https://forms.gle/PLACEHOLDER) for each teammate
+   - Complete [peer and self-evaluation form](https://forms.gle/6Rg38esMaq1t7jh59) for each teammate
    - Rate contributions, collaboration, and reliability
 
 ## Assessment
@@ -392,9 +391,9 @@ All team members start with the same team product score.
 #### Functionality (6.0 points)
 - [ ] Part 1: Latching control with memory (1.0 pt)
 - [ ] Part 2: Inverse logic with NC contacts (1.0 pt)
-- [ ] Part 3: Timer-based sequential control + modification (2.0 pts)
+- [ ] Part 3: Timer-based sequential control + modification (1.5 pts)
 - [ ] Part 4: Multiple timers and alternating behavior + modification (2.0 pts)
-- [ ] Part 5: Sequential logic with limit switches + modification (1.5 pts)
+- [ ] Part 5: Sequential logic with limit switches + modification (2.0 pts)
 
 #### Documentation (1.5 points)
 - [ ] Condition tables completed for all parts (0.6 pts)
@@ -403,15 +402,18 @@ All team members start with the same team product score.
 
 ### Individual Technical Interview (2.5 points)
 
-Each student will have a ~5 minute individual meeting with the instructor (during February 23 session or immediately after) where you will:
-- **Demonstrate operation:** Run one assigned part on the PLC (chosen by instructor)
+Each student will:
+- **Demonstrate operation:** Run at least one part on the PLC that you personally programmed/tested
 - **Explain ladder logic:** Walk through your condition table and explain when outputs turn ON/OFF
-- **Describe modifications:** Explain the modifications your team made to Parts 3-5
-- **Answer conceptual questions:** 
-  - What is the difference between NO and NC contacts?
-  - How does a timer work in ladder logic?
-  - When would you use a PLC vs a microcontroller?
-  - How does memory/latching differ from direct control?
+- **Describe modifications:** Explain the modifications your team made
+- **Answer conceptual questions about:**
+  - Normally open (NO) vs normally closed (NC) contacts (also, XIO/XIC)
+  - Ladder logic
+  - How timers work in ladder logic
+  - Memory/latching vs direct control
+  - Other PLC concepts covered in class/project
+
+**Timing:** When you complete a part and are ready to demonstrate, let the instructor know during our PLC sessions.
 
 **Scoring:**
 - **2.25–2.5 pts:** Can operate PLC confidently, explain all logic clearly, deep understanding
@@ -436,10 +438,6 @@ After calculating your base score (Team Product + Technical Interview = up to 10
 - **Major penalty (−4 to −7 pts):** Poor peer reviews (1.5–2.4 avg), minimal hands-on work
 - **Severe penalty (−8 to −10 pts):** Very poor peer reviews (<1.5 avg), non-participation
 
-### Extra Credit (up to 0.5 points)
-- Advanced modifications beyond requirements (e.g., counters, complex multi-timer sequences, advanced interlocks) (0.3 pts)
-- Exceptional documentation, innovation, or demonstrating deep PLC understanding (0.2 pts)
-
 ---
 
 ## Team Evaluation Process
@@ -452,16 +450,11 @@ Each team member will complete a **peer and self-evaluation form** (Google Form)
 
 For each teammate (including yourself), rate on a scale of 1-5:
 
-1. **Communication:** Did they communicate actively and keep the team updated?
-2. **Hands-on Participation:** Did they actively program/test the PLC or just observe?
-3. **Work Quality:** Did they put in genuine effort to understand and document the logic?
-4. **Collaboration:** Were they open to discussion and willing to help debug?
-5. **Contribution:** Did they contribute an equal/fair share to programming and testing?
-6. **Reliability:** Did they attend all sessions and follow through on commitments?
-
-**Open-ended questions:**
-- Describe specific tasks this teammate completed
-- Would you want to work with this teammate again? Why or why not?
+1. **Hands-on Participation:** Did they actively program/test the PLC or just observe?
+2. **Work Quality:** Did they put in genuine effort to understand and document the logic?
+3. **Collaboration:** Were they open to discussion and willing to help debug?
+4. **Contribution:** Did they contribute an equal/fair share to programming and testing?
+5. **Reliability:** Did they attend all sessions and follow through on commitments?
 
 **Part 2: Self-Reflection**
 
@@ -471,7 +464,7 @@ For each teammate (including yourself), rate on a scale of 1-5:
 - Were there any circumstances that affected your ability to contribute?
 
 **Honest Assessment:**
-- Rate your own communication, hands-on participation, work quality, collaboration, contribution, and reliability (1-5)
+- Rate your own hands-on participation, work quality, collaboration, contribution, and reliability (1-5)
 
 ---
 
@@ -507,7 +500,7 @@ Submit via your team's GitHub repository:
   - Any additional documentation
 
 **Additionally, by February 23 at 11:50 AM each team member must complete:**
-- [Peer and self-evaluation form](https://forms.gle/PLACEHOLDER)
+- [Peer and self-evaluation form](https://forms.gle/6Rg38esMaq1t7jh59)
 
 ### What to Submit
 
