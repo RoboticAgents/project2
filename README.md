@@ -109,6 +109,23 @@ By completing this project, you will be able to:
 - Connected Components Workbench (CCW)
 - Ladder Logic programming environment
 
+### File Organization
+
+To keep the workspace organized on the shared PLC computers at Bessemer:
+
+1. **Create a team directory:**
+   - On the PLC computer, create a folder named `cs304_[teamname]` (e.g., `cs304_alpha`, `cs304_beta`)
+   - Store all your project files in this folder
+
+2. **Name your project files:**
+   - Use your team name as a prefix for each project file
+   - Format: `teamname_Part1.ACD`, `teamname_Part2.ACD`, etc.
+   - Example: `alpha_Part1.ACD`, `alpha_Part2.ACD`, ..., `alpha_Part5.ACD`
+
+This naming convention ensures that each team's files are easy to identify and prevents confusion on the shared computers.
+
+---
+
 ## I/O Mapping for Our Setup
 
 Use **this mapping**, even if it differs from the guidebook.
@@ -233,13 +250,16 @@ In a manufacturing plant, it is common to give an audible warning when a piece o
 6. **Timer times out**: Green light illuminates (system ready)
 7. **Red button pressed**: Turns off the green light and resets the system
 
-### Required Modification
+### Modification Guidelines
 
-You must modify this basic implementation in at least one way. Choose one or more:
-- Change the timer duration 
+Consider ways to enhance or adapt this basic implementation. Here are some ideas:
+- Adjust the timer duration to suit different scenarios
 - Add logic so both red and green lights are OFF during the siren phase
-- Add a second timer for a multi-stage warning system
+- Implement a second timer for a multi-stage warning system
 - Make the siren pulse (on/off) during the warning period instead of continuous
+- Create your own modification that demonstrates timer concepts
+
+You are encouraged to experiment and make this implementation your own.
 
 **Important:** Add a comment above each rung explaining what the rung does and how it contributes to the sequence.
 
@@ -274,13 +294,16 @@ Make the red and green lights alternate ON and OFF:
 - The lights should never be ON simultaneously (unless you modify for complexity)
 - Consider how timers can enable/reset each other
 
-### Required Modification
+### Modification Guidelines
 
-You must modify the basic alternating pattern in at least one way. Choose one or more:
+Think about ways to build on the basic alternating pattern. Some possibilities:
 - Make the lights have different ON durations
 - Add the buzzer to sound only during transitions
 - Create a three-phase pattern (green, red, both OFF, repeat)
 - Add start/stop control using the green and red buttons
+- Design your own variation that demonstrates multiple timer coordination
+
+Feel free to explore different approaches.
 
 **Important:** Add a comment above each rung explaining what the rung does and how the timers interact.
 
@@ -320,14 +343,17 @@ You are working at a manufacturing facility that packages products. The first op
 4. **When DI_03 is made**: It latches a "Step 2 complete" bit (only if Step 1 is already complete)
 5. **After DI_03 is made**: The system is done, and a reset is required (Red button, DI_01)
 
-### Required Modification
+### Modification Guidelines
 
-You must modify this basic implementation in at least one way. Choose one or more:
+Explore ways to enhance the sequential control system. Consider options such as:
 - Use lights to indicate which step is complete (e.g., green ON after Step 1, red ON after Step 2)
 - Add a buzzer that sounds when the sequence is complete
-- Prevent DI_03 from being recognized unless DI_02 has already been activated
+- Ensure DI_03 is only recognized after DI_02 has been activated (enforcing sequence)
 - Add a timer between steps to simulate processing time
 - Create a counter that tracks how many boxes have passed through
+- Develop your own enhancement that demonstrates sequential logic principles
+
+The goal is to demonstrate understanding of sequential control—how you implement it is up to you.
 
 **Important:** Add a comment above each rung explaining what the rung does and which step it controls.
 
@@ -356,12 +382,14 @@ Each team must submit:
      - Part 3: Timer-based sequential control
      - Part 4: Multiple timers and alternating behavior
      - Part 5: Sequential logic with limit switches
-   - Describe the modifications you made to Parts 3-5 and why
+   - Describe any modifications or enhancements you made to Parts 3-5 and explain your design choices
    - One challenge you encountered and how you resolved it
    - One real-world application where you might use sequential logic like Part 5
 
 2. **PLC Programs** (choose one option):
-   - **Option A:** Export and upload your CCW program file (.ACD file) for each part (Part1.ACD, Part2.ACD, etc.)
+   - **Option A:** Export and upload your CCW program file (.ACD file) for each part
+     - Name your files using your team name prefix: `teamname_Part1.ACD`, `teamname_Part2.ACD`, etc.
+     - Example: `alpha_Part1.ACD`, `alpha_Part2.ACD`, ..., `alpha_Part5.ACD`
    - **Option B:** Submit screenshots of ladder logic for each part:
      - Part 1 ladder logic
      - Part 2 ladder logic
@@ -506,9 +534,13 @@ Submit via your team's GitHub repository:
 
 1. **GitHub Repository Contents:**
    - `writing/reflection.md` - completed with all sections and condition tables
-   - `programs/` folder - CCW program files for each part (Part1.ACD, Part2.ACD, etc.) **OR**
+   - `programs/` folder - CCW program files for each part (named with your team prefix: `teamname_Part1.ACD`, etc.) **OR**
    - `photos/` folder - screenshots of ladder logic for each part
    - `photos/` folder - at least 2 screenshots of live I/O or timer status during operation
+   
+   **Note:** On the PLC computers at Bessemer, store your files in the `cs304_[teamname]` directory you created.
+   
+   **Note:** On the PLC computers at Bessemer, store your files in the `cs304_[teamname]` directory you created.
 
 2. **Google Form:**
    - Complete peer and self-evaluation form (link provided above)
