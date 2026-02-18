@@ -5,22 +5,14 @@
 
 ---
 
-## Technical Reflection
+## Part 1: Latching Control with Memory
 
-### Lab 0: Logic Fundamentals (AND, OR, XOR)
+### What This Part Demonstrates Conceptually
 
-**Describe the behaviors you implemented:**
+[Explain what Part 1 demonstrates about latching logic and memory in PLCs]
 
+### Condition Table
 
-**Challenges encountered:**
-
-
-### Lab 2: Direct Control (No Memory)
-
-**Describe the behavior you implemented:**
-
-
-**Condition table for each rung:**
 ```
 Rung | Purpose              | Conditions for Output = TRUE
 -----|----------------------|--------------------------------
@@ -28,38 +20,36 @@ Rung | Purpose              | Conditions for Output = TRUE
 2    |                      |
 ```
 
-**What customization did you implement?**
+---
 
+## Part 2: Inverse Logic with NC Contacts
 
-**Challenges encountered:**
+### What This Part Demonstrates Conceptually
 
+[Explain what Part 2 demonstrates about inverse logic and normally closed contacts]
 
-### Lab 3: Start/Stop Control with Memory
+### Condition Table
 
-**Describe the behavior you implemented:**
-
-
-**Condition table for each rung:**
 ```
 Rung | Purpose              | Conditions for Output = TRUE
 -----|----------------------|--------------------------------
 1    |                      |
 ```
 
-**Explain the difference between NO and NC contacts in your implementation:**
+### Difference Between NO and NC Contacts
 
+[Explain the difference between normally open (NO) and normally closed (NC) contacts based on your implementation]
 
-**What customization did you implement?**
+---
 
+## Part 3: Timer-Based Sequential Control
 
-**Challenges encountered:**
+### What This Part Demonstrates Conceptually
 
+[Explain what Part 3 demonstrates about timer-based sequential control]
 
-### Lab 4: Timers and Time-Based Behavior
+### Condition Table
 
-**Describe the behavior you implemented:**
-
-**Condition table for each rung:**
 ```
 Rung | Purpose              | Conditions for Output = TRUE
 -----|----------------------|--------------------------------
@@ -70,50 +60,106 @@ Rung | Purpose              | Conditions for Output = TRUE
 5    |                      |
 ```
 
-**Explain the timer logic flow:**
-- When does each timer start? When does it stop?
-- How does the timer state (running vs done) control other outputs?
+### Modifications/Enhancements Made
 
-**What customization did you implement?**
+[Describe what modifications you made to the basic Part 3 implementation]
 
+### Design Choices
 
-**Challenges encountered:**
-
+[Explain why you made these modifications and what you learned from implementing them]
 
 ---
 
-## Key Concepts
+## Part 4: Multiple Timers and Alternating Behavior
 
-Reflect on your understanding of these core PLC concepts:
+### What This Part Demonstrates Conceptually
 
-**Basic Logic Operations:**
-- How did you implement AND, OR, and XOR logic using ladder logic contacts (series, parallel, combinations)?
+[Explain what Part 4 demonstrates about multiple timers working together]
 
-**PLC vs. Microcontroller:**
-- Based on your experience with both Arduino (Project 1) and PLCs, what are the key differences in how they're programmed and used?
+### Condition Table
 
-**Ladder Logic:**
-- Why is ladder logic used in industrial control instead of languages like C++ or Python?
+```
+Rung | Purpose              | Conditions for Output = TRUE
+-----|----------------------|--------------------------------
+1    |                      |
+2    |                      |
+3    |                      |
+4    |                      |
+```
 
-**Memory and State:**
-- How do internal control relays allow a PLC to "remember" state? How is this different from direct control?
+### How Timers Interact
 
-**Timers:**
-- What types of timer behavior did you observe? How do timers enable time-based control?
+[Explain how the timers enable, disable, or trigger each other]
 
-**Industrial Applications:**
-- How does PLC programming relate to robotics and automation? Where would you use a PLC vs. a microcontroller?
+### Modifications/Enhancements Made
+
+[Describe what modifications you made to the basic Part 4 implementation]
+
+### Design Choices
+
+[Explain why you made these modifications and what you learned from implementing them]
 
 ---
 
-## Appendix: Resources Used
+## Part 5: Sequential Logic with Limit Switches
 
-List all resources you consulted (include links):
-- PLC Guidebook (Labs 2, 3, 4)
-- Slides
--
+### What This Part Demonstrates Conceptually
 
+[Explain what Part 5 demonstrates about sequential logic and multi-step processes]
+
+### Condition Table
+
+```
+Rung | Purpose              | Conditions for Output = TRUE
+-----|----------------------|--------------------------------
+1    |                      |
+2    |                      |
+3    |                      |
+4    |                      |
+```
+
+### Sequential vs. Parallel Logic
+
+[Explain how sequential logic (where steps must happen in order) differs from parallel logic]
+
+### Modifications/Enhancements Made
+
+[Describe what modifications you made to the basic Part 5 implementation]
+
+### Design Choices
+
+[Explain why you made these modifications and what you learned from implementing them]
+
+---
+
+## Challenges and Solutions
+
+### One Major Challenge Encountered
+
+[Describe a significant challenge your team faced during any part of the project]
+
+### How You Resolved It
+
+[Explain the steps you took to debug and solve this problem]
+
+---
+
+## Real-World Application
+
+### Where Would You Use Sequential Logic Like Part 5?
+
+[Describe a real-world manufacturing, industrial, or automation scenario where sequential control similar to Part 5 would be useful. Be specific about what the system would do and why the sequential logic is important.]
+
+---
+
+## Resources Used
+
+List all resources you consulted:
+- [Slide presentation](https://docs.google.com/presentation/d/17-4WhA_WngpMENG631DXtnen3qnBNmOJ/edit?usp=sharing&ouid=115017904697304329138&rtpof=true&sd=true)
+- PLC Guidebook (for reference)
+- Class notes
+- [Add any other resources]
 
 **LLM use (ChatGPT, Copilot, etc.):**
-- (Note: Describe what you asked and how you used the responses)
+- [If you used any AI tools, describe what you asked and how you used the responses. If not, write "None"]
 
